@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "b1660fed-cf3e-4f50-83cd-813283012eb0",
+		"name": "EcommerceApp Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create the Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Mobile\",\r\n    \"description\" : \"Mobile Phones Category\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Computer\",\r\n    \"description\" : \"Desktop Category\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/categories/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"categories",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting the category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/categories/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"categories",
+						"3"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find the Category by Category Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/categories/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"categories",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find the Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding the Product in category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Iphone xr\",\r\n    \"description\" : \"Big Screen best Proccessor fantastic look\",\r\n    \"price\" : 49000,\r\n    \"categoryId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating the Product information",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Iphone xr\",\r\n    \"description\" : \" best Proccessor fantastic look\",\r\n    \"price\" : 49000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"products",
+						"2"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting the product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/products/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finding the product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finding all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the Product Under the Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ecomm/api/v1/categories/:categoryId/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ecomm",
+						"api",
+						"v1",
+						"categories",
+						":categoryId",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "categoryId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
