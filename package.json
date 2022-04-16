@@ -1,0 +1,25 @@
+{
+  "name": "ecommerceapp",
+  "version": "1.0.0",
+  "description": "The Making the Ecommerce App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayyedaaman2/EcommerceApp.git"
+  },
+  "author": "Sayyed Aaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sayyedaaman2/EcommerceApp/issues"
+  },
+  "homepage": "https://github.com/sayyedaaman2/EcommerceApp#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  }
+}
