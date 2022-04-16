@@ -8,6 +8,17 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
 
 function init(){
+
+    db.role.create({
+        id: 1,
+        name:db.ROLES[0]
+    })
+    
+    db.role.create({
+        id : 2,
+        name : db.ROLES[1]
+    })
+
     var categoriesData =[
         {name: "Electronics",
         description: "this category contains electrical appliances"},
@@ -31,6 +42,7 @@ function init(){
     })
    
 }
+//One to Many Relations
 db.category.hasMany(db.product);
 db.sequelize.sync({force : true}).then(()=>{
     console.log('table drop and  recreated');
