@@ -19,5 +19,5 @@ sequelize.authenticate().then(()=>{
 
 const db = { Sequelize, sequelize };
 db.category = require('./category.model')(sequelize,Sequelize);
-
+db.product = require('./product.model')(sequelize,Sequelize)
 module.exports = db;
