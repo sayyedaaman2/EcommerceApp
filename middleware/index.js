@@ -1,3 +1,3 @@
 const requestValidator = require('./requestValidator');
-
-module.exports = { requestValidator };
+const verifySignUp = require('./verifySignUp');
+module.exports = { requestValidator , verifySignUp };
