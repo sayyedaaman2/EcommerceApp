@@ -1,55 +1,50 @@
-const jwt = require('jsonwebtoken');
+const jwt =require("jsonwebtoken");
 const config = require('../config/auth.config');
-const { role } = require('../models');
-const db = require('../models');
+const db = require("../models");
 
-// verify the token 
+
+//verify the token
 
 verifyToken = (req, res, next) =>{
-    
     let token = req.headers["x-access-token"];
     if(!token){
         return res.status(403).send({
-            message : "No token provided!"
-        })
+            message: "No token provided!"
+        });
     }
-    jwt.verify(token, config.secret, (err, decoded) => {
+
+    jwt.verify(token, config.secret, (err, decoded) =>{
         if(err){
             return res.status(401).send({
-                message: "Unauthorized"
+                message:'Unauthorized'
             });
         }
-
-        req.userId = decoded.Id;
+        req.userId = decoded.id;
         next();
     });
 };
 
-
-// verify IsAdmin
-
 isAdmin = (req, res, next) =>{
-
-    db.user.findByPk(req.userId).then(user =>{
+    db.user.findByPk(req.userId).then(user => {
         if(!user){
             return res.status(401).send({
-                message : "invalid user"
-            });
+                message: "invalid user"
+            });        
         }
         user.getRoles().then(roles =>{
-            for(let i=0; i<role.length; i++){
+            for(let i=0; i<roles.length; i++){
                 if(roles[i].name === "admin"){
                     next();
                     return;
                 }
             }
             res.status(403).send({
-                message:"require admin role"
-            })
+                message: "require admin role"
+            });
             return;
-        })
-    })
+        });
+    });
 }
 
-const authJwt = { verifyToken , isAdmin};
+const authJwt = { verifyToken, isAdmin};
 module.exports = authJwt;
