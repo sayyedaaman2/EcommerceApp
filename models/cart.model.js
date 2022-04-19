@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) =>{
             primaryKey: true,
             autoIncrement : true
         },
-        const:{
+        cost:{
             type: Sequelize.INTEGER
         }
     }, {
