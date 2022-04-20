@@ -4,8 +4,8 @@
   "description": "The Making the Ecommerce App",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app"
+    "test": "jest",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }

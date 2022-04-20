@@ -18,7 +18,6 @@ exports.signup = (req, res) =>{
         password : bcrypt.hashSync(req.body.password, 10)
     };
     User.create(userObj).then(user =>{
-        console.log('user created');
         if(req.body.roles){
             Role.findAll({
                 where :{
@@ -28,7 +27,7 @@ exports.signup = (req, res) =>{
                 }
             }).then(roles =>{
                 user.setRoles(roles).then(()=>{
-                    res.send({ message: "user registered successfully!"})
+                    res.status(201).send({ message: "user registered successfully!"})
                 })
             })
         }else{
