@@ -18,7 +18,7 @@ exports.create =(req,res) =>{
     }).catch(err =>{
         console.log(`category [${err} not inserted in db ]`);
         res.status(500).send({
-            message: "Some internal erro occurred while string the category data!"
+            message: "Some internal error occurred while storing the category data!"
         })
     })
 }

@@ -27,7 +27,9 @@ function init(){
     ]
     var productsData = [
         {name: "Samsung",
-        price : 1000},
+        "description": "Best screen size",
+        price : 1000,
+        categoryId : 1},
     ]
     
     db.category.bulkCreate(categoriesData).then(()=>{

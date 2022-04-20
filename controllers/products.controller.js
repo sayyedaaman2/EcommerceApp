@@ -1,4 +1,3 @@
-const { response } = require('express');
 const db = require('../models');
 const Product = db.product;
 
@@ -64,9 +63,9 @@ exports.delete = (req, res) =>{
         },
         returning : true
     }).then(response =>{
-        res.sendStatus(200).send(response);
+        res.status(200).send(response);
     }).catch(err =>{
-        res.sendStatus(500).send({
+        res.status(500).send({
             message: "Some internal error occurred while deleting the product!"
         })
     });
