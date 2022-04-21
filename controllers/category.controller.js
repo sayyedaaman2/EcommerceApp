@@ -14,7 +14,7 @@ exports.create =(req,res) =>{
     //storing the category obejct in db
     Category.create(category).then(response =>{
         console.log(`category: [${response} got inserted in db]` );
-        res.status(200).send(response);
+        res.status(201).send(response);
     }).catch(err =>{
         console.log(`category [${err} not inserted in db ]`);
         res.status(500).send({
@@ -57,9 +57,9 @@ exports.delete = (req, res) =>{
             id: categoryId
         }
     }).then(response =>{
-        res.sendStatus(200).send(response);
+        res.status(200).send(response);
     }).catch(err =>{
-        res.sendStatus(500).send({
+        res.status(500).send({
             message: "Some internal error occurred while deleting the category!"
         })
     });
