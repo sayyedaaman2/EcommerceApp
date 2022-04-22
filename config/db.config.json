@@ -13,5 +13,20 @@
             "acquire": 20000,
             "idle" : 10000
         }
+    },
+    "production" : {
+        "database" : "vLfParTgcg",
+        "username" : "vLfParTgcg",
+        "password" : "",
+        "dialectInformation" : {
+            "dialect" : "mysql",
+            "host" : "remotemysql.com"
+        },
+        "pool" :{
+            "max" : 3,
+            "min" : 0,
+            "acquire": 20000,
+            "idle" : 10000
+        }
     }
 }

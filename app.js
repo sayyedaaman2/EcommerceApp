@@ -58,5 +58,5 @@ require('./routes/product.routes')(app);
 require('./routes/auth.routes')(app);
 require('./routes/cart.routes')(app);
 app.listen( process.env.PORT || serverConfig.PORT,()=>{
-    console.log(`Server is running on Port ${serverConfig.PORT}`);
+    console.log(`Server is running`);
 })
