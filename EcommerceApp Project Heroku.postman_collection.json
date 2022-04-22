@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "b1660fed-cf3e-4f50-83cd-813283012eb0",
-		"name": "EcommerceApp Project",
+		"_postman_id": "2fce24e7-b184-4f45-8f65-34fab7493fc9",
+		"name": "EcommerceApp Project Heroku",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -26,11 +26,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/categories",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/categories",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -56,11 +58,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/categories/3",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/categories/3",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -78,11 +82,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/categories/3",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/categories/3",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -107,11 +113,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/categories/2",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/categories/2",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -129,12 +137,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/ecomm/api/v1/categories?name=Vegetables",
-					"protocol": "http",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/categories?name=Vegetables",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -157,11 +166,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/categories",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/categories",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -193,11 +204,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/products",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -223,11 +236,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/products/2",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/products/2",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -252,11 +267,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/products/3",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/products/3",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -274,11 +291,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/products/2",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/products/2",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -296,11 +315,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/products",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -317,11 +338,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/categories/:categoryId/products",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/categories/:categoryId/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -355,11 +378,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/auth/signup",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/auth/signup",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -386,11 +411,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/auth/signup",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/auth/signup",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -417,11 +444,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/auth/signin",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/auth/signin",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -454,11 +483,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/carts",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/carts",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -490,11 +521,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/carts/1",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/carts/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -518,11 +551,13 @@
 					}
 				],
 				"url": {
-					"raw": "localhost:8080/ecomm/api/v1/carts/1",
+					"raw": "https://ecommerce-app-pro.herokuapp.com/ecomm/api/v1/carts/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ecommerce-app-pro",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ecomm",
 						"api",
@@ -533,32 +568,9 @@
 					"query": [
 						{
 							"key": "",
-							"value": null,
+							"value": "",
 							"disabled": true
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://ecommerceapp.infinityfreeapp.com/ecomm/api/v1/categories",
-					"protocol": "http",
-					"host": [
-						"ecommerceapp",
-						"infinityfreeapp",
-						"com"
-					],
-					"path": [
-						"ecomm",
-						"api",
-						"v1",
-						"categories"
 					]
 				}
 			},
