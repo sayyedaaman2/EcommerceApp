@@ -15,9 +15,9 @@
         }
     },
     "production" : {
-        "database" : "vLfParTgcg",
-        "username" : "vLfParTgcg",
-        "password" : "rw8N1f8OXK",
+        "database" : "7Cq6RgQnk5",
+        "username" : "7Cq6RgQnk5",
+        "password" : "5bYO8yOM7A",
         "dialectInformation" : {
             "dialect" : "mysql",
             "host" : "remotemysql.com"
