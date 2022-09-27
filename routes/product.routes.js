@@ -9,10 +9,10 @@ module.exports = function(app){
     app.put('/ecomm/api/v1/products/:id',[requestValidator.validateProductRequest, authJwt.verifyToken, authJwt.isAdmin], productController.update);
 
     //Route for DELETE request to delete the product
-    app.delete('/ecomm/api/v1/products/:id', productController.delete);
+    app.delete('/ecomm/api/v1/products/:id',[authJwt.verifyToken, authJwt.isAdmin] ,productController.delete);
 
     //Route for GET request to get the product by Primarykey (Id)
-    app.get('/ecomm/api/v1/products/:id', [authJwt.verifyToken, authJwt.isAdmin], productController.findOne);
+    app.get('/ecomm/api/v1/products/:id',  productController.findOne);
 
     //Route for GET request to get all products
     app.get('/ecomm/api/v1/products', productController.findAll);
