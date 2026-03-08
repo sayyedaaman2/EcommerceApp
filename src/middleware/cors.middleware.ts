@@ -30,6 +30,4 @@ const env = (process.env.NODE_ENV as Env) || 'development';
 const corsOptions = corsConfigs[env];
 
 const corsMiddleware = cors(corsOptions);
-console.log('CORS env:', env);
-console.log('CORS config:', corsOptions);
 export default corsMiddleware;

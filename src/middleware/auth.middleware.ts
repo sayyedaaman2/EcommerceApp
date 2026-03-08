@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { AppError } from '@/utils/AppError';
+import logger from '@/utils/logger';
 
 interface JwtPayload {
   id: number;
@@ -28,7 +29,7 @@ export const authMiddleware = (req: AuthRequest, res: Response, next: NextFuncti
 
     next();
   } catch (error) {
-    console.error(error);
+    logger.error(error);
     next(new AppError('Invalid or expired token', 401));
   }
 };
