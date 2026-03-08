@@ -11,6 +11,12 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
     rules: {
       'no-console': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+        },
+      ],
     },
   },
   tseslint.configs.recommended,

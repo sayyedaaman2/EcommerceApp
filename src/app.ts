@@ -5,8 +5,10 @@ import { globalErrorHandler } from '@/middleware/error.middleware';
 import { notFoundMiddleware } from '@/middleware/notFound.middleware';
 import { rateLimiter } from './middleware/rateLimiter.middleware';
 import { loggerMiddleware } from '@/middleware/logger.middleware';
-
 import { securityMiddleware } from '@/middleware/security.middleware';
+
+// routes
+import rootRoutes from '@/routes';
 
 // instance of express
 const app = express();
@@ -26,6 +28,9 @@ app.get('/ping', (req, res) => {
     success: true,
   });
 });
+
+// root routes
+app.use('/ecomm/api/v1', rootRoutes);
 
 // Not found middleware
 app.use(notFoundMiddleware);

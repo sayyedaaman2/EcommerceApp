@@ -21,3 +21,9 @@ export const getRoleById = async (id: number) => {
     where: { id },
   });
 };
+
+export const getRoleByName = async (name: string) => {
+  return prisma.role.findUnique({
+    where: { name },
+  });
+};
