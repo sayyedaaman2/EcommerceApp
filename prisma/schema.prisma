@@ -35,7 +35,7 @@ model User {
 
   addresses Address[]
   carts     Cart[]
-  orsers    Order[]
+  orders    Order[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
