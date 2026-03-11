@@ -1,14 +1,14 @@
-import bcrypt from "bcrypt";
+import bcrypt from 'bcrypt';
 
 const SALT_ROUNDS = 10;
 
 export const hashPassword = async (plainTextPassword: string): Promise<string> => {
-  return bcrypt.hash(plainTextPassword, SALT_ROUNDS);
+    return bcrypt.hash(plainTextPassword, SALT_ROUNDS);
 };
 
 export const comparePassword = async (
-  plainTextPassword: string,
-  hashedPassword: string
+    plainTextPassword: string,
+    hashedPassword: string,
 ): Promise<boolean> => {
-  return bcrypt.compare(plainTextPassword, hashedPassword);
+    return bcrypt.compare(plainTextPassword, hashedPassword);
 };

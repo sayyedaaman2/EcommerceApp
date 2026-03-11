@@ -23,10 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/ping', (req, res) => {
-  res.status(200).send({
-    message: 'PONG',
-    success: true,
-  });
+    res.status(200).send({
+        message: 'PONG',
+        success: true,
+    });
 });
 
 // root routes
