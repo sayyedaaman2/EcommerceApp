@@ -31,6 +31,7 @@ model User {
   status       String  @default("active")
 
   roleId Int
+  refreshToken String? @db.Text
   role   Role @relation(fields: [roleId], references: [id])
 
   addresses Address[]

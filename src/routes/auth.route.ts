@@ -8,5 +8,7 @@ router.post('/register', asyncHandler(Controller.registerUser));
 router.post('/login', asyncHandler(Controller.loginUser));
 
 router.get('/token/verification', authMiddleware, asyncHandler(Controller.userAuthentication));
+router.post("/refresh-token", asyncHandler(Controller.refreshToken));
+router.post("/logout", asyncHandler(Controller.logout))
 
 export default router;

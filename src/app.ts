@@ -1,4 +1,5 @@
 import express from 'express';
+import cookieParser from "cookie-parser";
 
 import corsMiddleware from '@/middleware/cors.middleware';
 import { globalErrorHandler } from '@/middleware/error.middleware';
@@ -18,7 +19,7 @@ app.use(securityMiddleware);
 app.use(loggerMiddleware);
 app.use(rateLimiter);
 app.use(corsMiddleware);
-
+app.use(cookieParser())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
