@@ -174,3 +174,51 @@ export const findAllProducts = async (
     next(error);
   }
 };
+
+export const addStock = async (req:Request,res:Response, next:NextFunction)=>{
+  try{
+    const {productId, stocks} = req.body;
+
+    if(!productId || !stocks){
+      return next(new AppError("productId and stocks is required.",400))
+    }
+
+    if(typeof productId !== "number" || typeof stocks !== "number"){
+      return next(new AppError("productId and stocks should be number", 400));
+    }
+
+    const updatedStock = await Product.addStock(productId,stocks);
+
+    res.status(200).json({
+      success : true,
+      message : "Stock added successfully.",
+      data : updatedStock
+    })
+  }catch(error){
+    next(error)
+  }
+}
+
+export const reduceStock = async (req:Request,res:Response, next:NextFunction)=>{
+  try{
+    const {productId, stocks} = req.body;
+
+    if(!productId || !stocks){
+      return next(new AppError("productId and stocks is required.",400))
+    }
+
+    if(typeof productId !== "number" || typeof stocks !== "number"){
+      return next(new AppError("productId and stocks should be number", 400));
+    }
+
+    const reducedStock = await Product.reduceStock(productId,stocks);
+
+    res.status(200).json({
+      success : true,
+      message : "Stock reduced successfully.",
+      data : reducedStock
+    })
+  }catch(error){
+    next(error)
+  }
+}
