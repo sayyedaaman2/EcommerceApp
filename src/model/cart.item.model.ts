@@ -21,3 +21,23 @@ export const getCartItemById = async (id: number) => {
         where: { id },
     });
 };
+
+export const getCartItemByProductIdAndCartId = async(productId:number,cartId:number)=>{
+    return prisma.cartItem.findFirst({
+        where : {
+            cartId,
+            productId
+        }
+    })
+}
+export const deleteCartItemById = async(cartItemId : number)=>{
+    return prisma.cartItem.delete({
+        where : {id  : cartItemId}
+    })
+}
+
+export const getCartItemsByCartId = async(cartId:number)=>{
+    return prisma.cartItem.findMany({
+        where : {cartId}
+    })
+}
