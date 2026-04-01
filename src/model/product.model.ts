@@ -27,6 +27,12 @@ export const getProducts = async (options: any) => {
   });
 };
 
+export const getProductsByIds = async(productIds:number[])=>{
+    return prisma.product.findMany({
+        where : {id : {in : productIds}}
+    })
+}
+
 export const getProductById = async (id: number) => {
     return prisma.product.findUnique({
         where: { id },
@@ -41,3 +47,25 @@ export const getProductByName = async (name:string) => {
 export const getCount = async(options : {where? : {}})=>{
     return prisma.product.count(options);
 }
+
+export const addStock = async (productId: number, quantity: number) => {
+    return prisma.product.update({
+        where: { id: productId },
+        data: {
+            stock: {
+                increment: quantity
+            }
+        }
+    });
+};
+
+export const reduceStock = async (productId: number, quantity: number) => {
+    return prisma.product.update({
+        where: { id: productId },
+        data: {
+            stock: {
+                decrement: quantity
+            }
+        }
+    });
+};
