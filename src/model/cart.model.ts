@@ -21,3 +21,11 @@ export const getCartById = async (id: number) => {
         where: { id },
     });
 };
+
+export const getCartByUserId = async (id:number)=>{
+    return prisma.cart.findFirst({
+        where : {
+            userId : id
+        }
+    })
+}
