@@ -11,9 +11,20 @@ export const updateProductById = async (id: number, data: Prisma.ProductUpdateIn
         data,
     });
 };
+export const deleteProductById = async(id:number)=>{
+    return prisma.product.delete({
+        where : {id}
+    })
+}
+export const getProducts = async (options: any) => {
+  const { where, skip, limit, orderBy } = options;
 
-export const getProducts = async () => {
-    return prisma.product.findMany({ orderBy: { createdAt: 'desc' } });
+  return prisma.product.findMany({
+    where,
+    skip,
+    take: limit,
+    orderBy,
+  });
 };
 
 export const getProductById = async (id: number) => {
@@ -21,3 +32,12 @@ export const getProductById = async (id: number) => {
         where: { id },
     });
 };
+export const getProductByName = async (name:string) => {
+    return prisma.product.findFirst({
+        where: { name },
+    });
+};
+
+export const getCount = async(options : {where? : {}})=>{
+    return prisma.product.count(options);
+}
